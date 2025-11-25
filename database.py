@@ -12,9 +12,9 @@ class SupabaseDB:
     def __init__(self):
         # Try to get credentials from Streamlit secrets first, then environment
         try:
-            self.url = st.secrets.get("SUPABASE_URL")
-            self.key = st.secrets.get("SUPABASE_ANON_KEY")
-            self.service_key = st.secrets.get("SUPABASE_SERVICE_KEY")
+            self.url = st.secrets.get("https://dkeypaumcjaqppqmumca.supabase.co")
+            self.key = st.secrets.get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRrZXlwYXVtY2phcXBwcW11bWNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM5NzE4NTEsImV4cCI6MjA3OTU0Nzg1MX0.w3iQX7Pna4HXqZwgQqAQ5F9tLFfnSyVbHy7GfBKHuN")
+            self.service_key = st.secrets.get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRrZXlwYXVtY2phcXBwcW11bWNhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2Mzk3MTg1MSwiZXhwIjoyMDc5NTQ3ODUxfQ.VYJ_JhA2NHGs-qJZKnNE-Su91--6lK3kvQy6HuOrTjE")
         except:
             self.url = os.getenv("SUPABASE_URL")
             self.key = os.getenv("SUPABASE_ANON_KEY")
